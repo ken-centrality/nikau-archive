@@ -1,0 +1,12 @@
+{
+	"dependencies": {
+		"@subsquid/substrate-ingest": "^1.1.1"
+	},
+	"devDependencies": {
+		"patch-package": "^6.4.7",
+		"postinstall-postinstall": "^2.1.0"
+	},
+	"scripts": {
+		"ingest": "squid-substrate-ingest -e wss://nikau.centrality.me/public/ws --start-block 4700000 --out postgres://postgres:postgres@localhost:5433/nikau-archive"
+	}
+}
