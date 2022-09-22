@@ -1,4 +1,10 @@
 services:
+  chain:
+    image: ghcr.io/futureversecom/seed:00b0810
+    command: ["--dev", "--unsafe-ws-external", --unsafe-rpc-external]
+    ports:
+      - "9933:9933"
+      - "9944:9944"
   db:
     image: postgres:14
     restart: always
@@ -22,7 +28,7 @@ services:
     command:
       [
         "--database-url",
-        "postgres://postgres:postgres@db:5432/nikau-archive",
+        "postgres://postgres:postgres@db:5432/porcini-archive",
         "--evm-support",
       ]
     ports:

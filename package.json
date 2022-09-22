@@ -7,6 +7,6 @@
 		"postinstall-postinstall": "^2.1.0"
 	},
 	"scripts": {
-		"ingest": "squid-substrate-ingest -e wss://nikau.centrality.me/public/ws --start-block 4700000 --out postgres://postgres:postgres@localhost:5433/nikau-archive"
+		"ingest": "squid-substrate-ingest -e ws://localhost:9944/ws --out postgres://postgres:postgres@localhost:5433/porcini-archive"
 	}
 }
